@@ -1,0 +1,224 @@
+.header {
+  background: linear-gradient(360deg, #131212 2.84%, rgba(19, 18, 18, 0.610513) 36.63%, rgba(19, 18, 18, 0.19) 52.74%), url('../../../img/jpg/head-bg.jpg') no-repeat;
+  background-size: cover;
+  object-fit: cover;
+  size: 100%;
+
+  &-center {
+    height: 71px;
+    @include flex($alignItems: center)
+  }
+
+  &-menu {
+    @include bg-color(rgba(80, 28, 28, 0.12));
+    height: 71px;
+
+    .header__item {
+      @include flex($alignItems: center);
+      margin-left: 35px;
+    }
+
+    .header-item {
+      margin-right: 29px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    .header-link {
+      @include font($weight: 500, $size: 14, $color: $color2);
+      letter-spacing: -0.025em;
+      transition: .3s;
+
+      &:hover {
+        color: $hoverColor;
+      }
+    }
+  }
+
+  &-form {
+    @include flex($alignItems: center);
+  }
+
+  &__icon {
+    margin-right: 13px;
+    cursor: pointer;
+
+    img {
+      vertical-align: middle;
+    }
+  }
+
+  &__search {
+    margin-right: 11px;
+    @include position ($position: relative);
+
+    &::after {
+      @include position($top: 9px, $right: 10px,);
+      width: 16px;
+      height: 16px;
+      background: url('../../../img/svg/MagnifyingGlass.svg') no-repeat;
+    }
+
+    .form-control {
+      @include bg-color ($bg: rgba(3, 3, 3, 0.34), $color: $color2);
+      backdrop-filter: blur(2px);
+      @include border-radius($radius: 8px);
+      outline: transparent;
+      border: transparent;
+      width: 220px;
+      padding: 8px 0;
+      padding-left: 19px;
+
+      &::placeholder {
+        @include flex($alignItems: center);
+        @include font($family: inherit, $color: $color3, $size: 14px);
+        letter-spacing: -0.025em;
+      }
+    }
+  }
+
+  &__language {
+    @include bg-color ($bg: rgba(3, 3, 3, 0.34));
+    @include border-radius ($radius: 8px);
+    @include flex ($justifyContent: center, $alignItems: center);
+    width: 84px;
+    padding: 8px 0;
+
+    .btn-switch {
+      margin-right: 12px;
+      cursor: pointer;
+      transition: .3s;
+      @include font($size: 16px, $color: $color1, $weight: 700);
+      letter-spacing: -0.025em;
+
+      &:hover {
+        color: $color3;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    .active-switch {
+      color: $color3;
+
+      &:hover {
+        color: $color1;
+      }
+    }
+  }
+
+  &__left, &__right {
+    @include flex($alignItems: center);
+  }
+
+  &__content {
+    margin-top: 58px;
+    padding-bottom: 52px;
+  }
+
+  &-text {
+    font-family: $font;
+    margin-bottom: 11px;
+
+    .header-title {
+      @include font($weight: 700, $size: 48px, $color: $color2);
+      width: 598px;
+    }
+  }
+
+  &-desc {
+    font-family: $mainFont;
+    margin-bottom: 43px;
+
+    .header-description {
+      @include font($size: 16px, $color: $color2);
+      width: 350px;
+      text-align: left;
+      line-height: 25px;
+
+      span {
+        font-weight: 700;
+      }
+    }
+  }
+
+  &-button {
+    margin-bottom: 79px;
+
+    .btn-get {
+      @include flex($alignItems: center, $justifyContent: center);
+      @include bg-color($bg: $color1);
+      @include size($width: 220px, $height: 65px);
+      @include border-radius($radius: 15px);
+      @include font($size: 20px, $color: $color2, $weight: 700);
+      box-shadow: 0px 4px 39px rgba(231, 87, 87, 0.25);
+      transition: .3s;
+
+      &:hover {
+        background: $hoverColor;
+        box-shadow: 0px 4px 39px rgba(231, 87, 87, 0.25);
+      }
+
+      &:focus {
+        box-shadow: 0px 4px 39px rgba(231, 87, 87, 0.25), inset 0px 4px 26px rgba(79, 8, 8, 0.61);
+      }
+    }
+  }
+
+  &__choose {
+    background: $color4;
+    box-shadow: 0px 4px 45px rgba(0, 0, 0, 0.25);
+    border-radius: 11px;
+    padding: 8px 18px;
+    margin-bottom: 52px;
+
+    .header-choose {
+      @include flex ($alignItems: center);
+
+      li {
+        margin-right: 41px;
+
+        a {
+          @include font ($color: $color5, $family: $font, $size: 18px);
+          transition: .3s;
+
+          &:hover {
+            filter: brightness(80%);
+          }
+        }
+
+        &:first-child {
+          margin-right: 0;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+
+      .active-button {
+        @include flex ($justifyContent: center, $alignItems: center);
+        @include size ($width: 159px, $height: 60px);
+        @include border-radius ($radius: 9px);
+        @include font ($size: 18px, $weight: 600, $color: $color2);
+        background: linear-gradient(90deg, #E5453D -14.78%, #FF7A2E 451.57%);
+        border-radius: 9px;
+        margin-right: 17px;
+        transition: .3s;
+
+        &:hover {
+          background: $hoverColor;
+          box-shadow: 0px 4px 39px rgba(231, 87, 87, 0.25);
+        }
+
+        &:focus {
+          box-shadow: 0px 4px 39px rgba(231, 87, 87, 0.25), inset 0px 4px 26px rgba(79, 8, 8, 0.61);
+        }
+      }
+    }
+  }
+}

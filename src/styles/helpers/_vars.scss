@@ -1,0 +1,44 @@
+// Fonts
+$mainFont: 'Inter';
+$font: 'Quarion';
+
+$logoFont: 'DSJapanCyr';
+
+$mainFontColor: #000;
+$mainFontSize: 16px;
+
+$fontWeights: (
+  thin: 100,
+  extra-light: 200,
+  light: 300,
+  regular: 400,
+  medium: 500,
+  semi-bold: 600,
+  bold: 700,
+  extra-bold: 800,
+  black: 900
+);
+
+// Размеры экрана
+$breakpoints: (
+  phone: 400px,
+  phone-wide: 480px,
+  phablet: 560px,
+  tablet-small: 640px,
+  tablet: 768px,
+  tablet-wide: 1024px,
+  desktop: 1248px,
+  desktop-wide: 1440px
+);
+
+// Цвета
+$color1: #F1433A;
+$color2: #fff;
+$color3: #757575;
+$color4: #0F0F0F;
+$color5: #797979;
+$hoverColor: #FC4339;
+$linear: linear-gradient(90deg, #E5453D -14.78%, #FF7A2E 451.57%);
+
+$colorBackground: #131212;
+$colorBlocks: #201E1E;
